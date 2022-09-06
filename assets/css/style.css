@@ -1,0 +1,87 @@
+/* VARIAVEIS */
+:root{
+    /* FONTES */
+    --fontfamily-hp: 'Harry Potter', sans-serif;
+    /* TAMANHOS */
+    /* CORES */
+    --ravenclaw-yellow: rgba(148, 107, 45, 0.6);
+    --ravenclaw-blue: rgba(0, 10, 144, 0.6);
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/bg-05.jpg");
+    background-size: cover;
+    color: white;
+    font-family: var(--fontfamily-hp);
+}
+
+/* HEADER */
+.header, .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+
+.header h1, .footer h3{
+    background-color: var(--ravenclaw-yellow);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+/* IMAGEM */
+.main a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+.main a:active{
+    color: var(--ravenclaw-blue);
+}
+.main a:visited{
+    color: var(--ravenclaw-yellow);
+}
+.main figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.main img{
+    width: 50%;
+    margin: 20px;
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 375px) {
+    .main img{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main{
+        display: flex;
+        flex-direction: row;
+    }
+    .main img{
+        width: 60%;
+    }
+}
